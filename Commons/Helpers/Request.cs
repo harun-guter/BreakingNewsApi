@@ -6,8 +6,6 @@ namespace Commons.Helpers
 {
     public class Request
     {
-        private string _data;
-
         public string Download(string url)
         {
             using var webClient = new WebClient();
