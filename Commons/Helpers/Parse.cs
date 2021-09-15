@@ -70,7 +70,7 @@ namespace Commons.Helpers
 
                             time = _subDocument.DocumentNode.SelectSingleNode("//div[@class='hblnTime']").InnerText;
 
-                            url = title = _subDocument.DocumentNode.SelectSingleNode("//div[@class='hblnContent']/a").Attributes["href"].Value;
+                            url = _subDocument.DocumentNode.SelectSingleNode("//div[@class='hblnContent']/a").Attributes["href"].Value;
 
                             guid = Guid.NewGuid();
 
