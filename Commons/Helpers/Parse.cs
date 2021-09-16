@@ -66,8 +66,8 @@ namespace Commons.Helpers
                                     image = subDocument.DocumentNode.SelectSingleNode("//div[@class='hblnImage']/a/img").Attributes["data-src"].Value;
                             }
 
-                            if (image == "static/images/defaultblank170.png")
-                                image = "https://www.haberler.com/son-dakika/" + "static/images/defaultblank170.png";
+                            if (image == "static/images/default_blank_170.png")
+                                image = "https://www.haberler.com/son-dakika/" + "static/images/default_blank_170.png";
 
                             time = subDocument.DocumentNode.SelectSingleNode("//div[@class='hblnTime']").InnerText;
                             url = subDocument.DocumentNode.SelectSingleNode("//div[@class='hblnContent']/a").Attributes["href"].Value;
@@ -114,8 +114,8 @@ namespace Commons.Helpers
                     Id = id,
                     Title = titles[i].Groups[2].ToString(),
                     Summary = summaries[i].Groups[2].ToString(),
-                    Image = images[i].Groups[3].ToString() == "static/images/defaultblank170.png" ?
-                        "https://www.haberler.com/son-dakika/" + "static/images/defaultblank170.png" :
+                    Image = images[i].Groups[3].ToString() == "static/images/default_blank_170.png" ?
+                        "https://www.haberler.com/son-dakika/" + "static/images/default_blank_170.png" :
                         images[i].Groups[3].ToString(),
                     Time = times[i].Groups[1].ToString(),
                     Url = urls[i].Groups[1].ToString(),
