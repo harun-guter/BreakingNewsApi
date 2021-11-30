@@ -18,8 +18,7 @@ namespace WebApi.Controllers
             var result = new NewsViewModel();
 
             var data = request.Download("https://www.haberler.com/son-dakika/");
-            //var news = parse.HaberlerDotCom(data);
-            var news = parse.HaberlerDotComV2(data);
+            var news = parse.Haberler(data);
 
             result.TotalNews = news.Count;
             result.News = news;
@@ -35,7 +34,7 @@ namespace WebApi.Controllers
             var result = new News();
 
             var data = request.Download("https://www.haberler.com/son-dakika/");
-            var news = parse.HaberlerDotComV2(data);
+            var news = parse.Haberler(data);
 
             result = news.Where(i => i.Id == id).SingleOrDefault();
             return result;
