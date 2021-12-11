@@ -7,5 +7,5 @@ API that lists contents from "https://haberler.com/sondakika" in JSON format
 #### Get all news
 
 ```http
-  GET /api/news
+GET /api/news
 ```
