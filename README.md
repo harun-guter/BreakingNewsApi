@@ -13,7 +13,7 @@ GET /api/news
 #### Get single news
 
 ```http
-GET /api/news/${id}
+GET /api/news/{id}
 ```
 
 | Parameter | Type     | Required                       |
